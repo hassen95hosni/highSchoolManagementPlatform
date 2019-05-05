@@ -1,0 +1,28 @@
+﻿@model HighSchoolManagmentApp.ViewModel.SalleViewModel
+@{
+    ViewData["Title"] = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New</h2>
+@using (Html.BeginForm("create", "salle"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.salle.name)
+        @Html.TextBoxFor(m => m.salle.name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.salle.NombreEtudiant)
+        @Html.TextBoxFor(m => m.salle.NombreEtudiant, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.salle.Type)
+        @Html.TextBoxFor(m => m.salle.Type, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.salle.materiels)
+        @Html.DropDownListFor(m => m.salle.materiels, new SelectList(Model.materiel, "Id", "Nom"), "Select Materiel", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class=" btn btn_primary"> save </button>
+}

@@ -1,0 +1,29 @@
+﻿@model HighSchoolManagmentApp.ViewModel.AbsenceSeanceviewModel
+@{
+    ViewData["Title"] = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New</h2>
+@using (Html.BeginForm("Create", "absence"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.absence.raison)
+        @Html.TextBoxFor(m => m.absence.raison, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.absence.date)
+        @Html.TextBoxFor(m => m.absence.date, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.absence.seanceId)
+        @Html.DropDownListFor(m => m.absence.seanceId, new SelectList(Model.seance, "Id", "Name"), "Select Seance", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.absence.studentId)
+        @Html.DropDownListFor(m => m.absence.studentId, new SelectList(Model.student, "Id", "Name"), "Select Seance", new { @class = "form-control" })
+    </div>
+
+
+    <button type="submit" class=" btn btn_primary"> save </button>
+}

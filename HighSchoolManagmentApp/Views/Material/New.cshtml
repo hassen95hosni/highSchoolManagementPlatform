@@ -1,0 +1,15 @@
+﻿@model HighSchoolManagmentApp.Models.Materiel
+@{
+    ViewData["Title"] = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New</h2>
+@using (Html.BeginForm("create", "Material"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nom)
+        @Html.TextBoxFor(m => m.Nom, new { @class = "form-control" })
+    </div>
+    <button type="submit" class=" btn btn_primary"> save </button>
+}

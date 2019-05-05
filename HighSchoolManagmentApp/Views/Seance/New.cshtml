@@ -1,0 +1,38 @@
+﻿@model HighSchoolManagmentApp.ViewModel.SeanceViewModel
+@{
+    ViewData["Title"] = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New</h2>
+@using (Html.BeginForm("create", "seance"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.seance.Name)
+        @Html.TextBoxFor(m => m.seance.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seance.Day)
+        @Html.TextBoxFor(m => m.seance.Day, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seance.Number)
+        @Html.TextBoxFor(m => m.seance.Number, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seance.salleId)
+        @Html.DropDownListFor(m => m.seance.salleId, new SelectList(Model.salle, "Id", "Name"), "Select Seance", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seance.subjectId)
+        @Html.DropDownListFor(m => m.seance.subjectId, new SelectList(Model.subject, "Id", "Name"), "Select Seance", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seance.enseignantId)
+        @Html.DropDownListFor(m => m.seance.enseignantId, new SelectList(Model.enseignant, "Id", "Name"), "Select Seance", new { @class = "form-control" })
+    </div>
+
+
+
+    <button type="submit" class=" btn btn_primary"> save </button>
+}
