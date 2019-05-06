@@ -11,6 +11,7 @@ namespace HighSchoolManagmentApp.Models
         public String Name { get; set; }
         public String familyName { get; set; }
         public Grade Grade { get; set; }
+        public int gradeId { get; set; }
         public List<Absence> absence { get; set; }
 
     }

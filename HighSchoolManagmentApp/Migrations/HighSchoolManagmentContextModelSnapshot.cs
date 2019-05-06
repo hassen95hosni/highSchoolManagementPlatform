@@ -147,15 +147,15 @@ namespace HighSchoolManagmentApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("GradeId");
-
                     b.Property<string>("Name");
 
                     b.Property<string>("familyName");
 
+                    b.Property<int>("gradeId");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("GradeId");
+                    b.HasIndex("gradeId");
 
                     b.ToTable("Student");
                 });
@@ -231,7 +231,8 @@ namespace HighSchoolManagmentApp.Migrations
                 {
                     b.HasOne("HighSchoolManagmentApp.Models.Grade", "Grade")
                         .WithMany()
-                        .HasForeignKey("GradeId");
+                        .HasForeignKey("gradeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("HighSchoolManagmentApp.Models.Subject", b =>

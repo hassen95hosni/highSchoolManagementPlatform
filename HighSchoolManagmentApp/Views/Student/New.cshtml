@@ -17,8 +17,8 @@
         @Html.TextBoxFor(m => m.student.familyName, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.student.Grade)
-        @Html.DropDownListFor(m => m.student.Grade, new SelectList(Model.grade, "Id", "Name"), "Select grade", new { @class = "form-control" })
+        @Html.LabelFor(m => m.student.gradeId)
+        @Html.DropDownListFor(m => m.student.gradeId , new SelectList(Model.grade, "Id", "Name"), "Select grade", new { @class = "form-control" })
     </div>
    
     <button type="submit" class=" btn btn_primary"> save </button>

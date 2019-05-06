@@ -51,6 +51,7 @@ namespace HighSchoolManagmentApp.Controllers
             _context.SaveChanges(); 
             return RedirectToAction("All","Absence");
         }
+
         public ActionResult Delete(int id)
         {   
             var absnece = _context.Absence.SingleOrDefault(c=> c.id==id);
@@ -62,6 +63,24 @@ namespace HighSchoolManagmentApp.Controllers
                 return RedirectToAction("All", "Absence");
             }
             return RedirectToAction("All", "Absence");
+        }
+        public ActionResult student(int id)
+        {
+            var student = _context.Student.SingleOrDefault(c => c.Id == id);
+            if (student == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(student);
+        }
+        public ActionResult seance(int id)
+        {
+            var seance = _context.Seance.SingleOrDefault(c => c.Id == id);
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(seance);
         }
     }
 }

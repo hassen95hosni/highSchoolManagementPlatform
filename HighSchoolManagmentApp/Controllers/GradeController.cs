@@ -48,11 +48,29 @@ namespace HighSchoolManagmentApp.Controllers
             var res = _context.Grades.Remove(grade);
             _context.SaveChanges();
 
-            if (grade != null)
+            if (grade == null)
             {
                 return RedirectToAction("All", "Grade");
             }
             return RedirectToAction("All", "Grade");
+        }
+        public ActionResult emploi(int id)
+        {
+            var student = _context.Seance;
+            if (student == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(student);
+        }
+        public ActionResult subject(int id)
+        {
+            var seance = _context.Subject;
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(seance);
         }
 
     }

@@ -39,10 +39,10 @@ namespace HighSchoolManagmentApp.Controllers
             };
             return View(veiwModel);
         }
-        public ActionResult Create(SubjectViewModel subject)
+        public ActionResult Create(Subject subject)
         {
             _context.
-                Subject.Add(subject.subject);
+                Subject.Add(subject);
             _context.SaveChanges();
             return RedirectToAction("All", "Subject");
         }
@@ -57,6 +57,15 @@ namespace HighSchoolManagmentApp.Controllers
                 return RedirectToAction("All", "Subject");
             }
             return RedirectToAction("All", "Subject");
+        }
+        public ActionResult besoin(int id)
+        {
+            var seance = _context.Materiels;
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Material");
+            }
+            return RedirectToAction("All", "Material");
         }
     }
 }

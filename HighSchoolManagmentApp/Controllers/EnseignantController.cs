@@ -45,10 +45,10 @@ namespace HighSchoolManagmentApp.Controllers
             };
             return View(viewModel);
         }
-        public ActionResult Create(EnseignantViewModel ensignant)
+        public ActionResult Create(Enseignant ensignant)
         {
             _context.
-                Enseignant.Add(ensignant.enseignant);
+                Enseignant.Add(ensignant);
             _context.SaveChanges();
             return RedirectToAction("All", "Enseignant");
         }
@@ -64,6 +64,23 @@ namespace HighSchoolManagmentApp.Controllers
             }
             return RedirectToAction("All", "Enseignant");
         }
-
+        public ActionResult emploi(int id)
+        {
+            var student = _context.Seance;
+            if (student == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(student);
+        }
+        public ActionResult subject(int id)
+        {
+            var seance = _context.Subject;
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(seance);
+        }
     }
 }

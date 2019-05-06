@@ -39,12 +39,14 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.seanceId)
+                @Html.ActionLink("seance", "seance", new { id = item.seanceId })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.date)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.studentId)
+                @Html.ActionLink("student", "student", new { id = item.studentId })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.raison)

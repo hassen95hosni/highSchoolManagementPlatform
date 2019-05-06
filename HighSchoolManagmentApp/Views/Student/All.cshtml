@@ -46,9 +46,11 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Grade)
+                @Html.ActionLink("grade", "grade", new { id = item.Grade })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.absence)
+                @Html.ActionLink("absence", "absence", new { id = item.Id })
             </td>
             <td>
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })

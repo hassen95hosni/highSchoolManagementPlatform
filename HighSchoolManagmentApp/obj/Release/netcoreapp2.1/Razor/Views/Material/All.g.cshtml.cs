@@ -64,7 +64,7 @@ using HighSchoolManagmentApp.Models;
             WriteLiteral("\r\n<h2>All Materiel</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(193, 34, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c1087f25d68474b8f6c5adbd5b95ef5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d7e48c1bbb3d466da416697d18cd5f02", async() => {
                 BeginContext(213, 10, true);
                 WriteLiteral("Create New");
                 EndContext();

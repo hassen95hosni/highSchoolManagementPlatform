@@ -65,5 +65,33 @@ namespace HighSchoolManagmentApp.Controllers
             return RedirectToAction("All", "Seance");
         }
 
+        public ActionResult subject(int id)
+        {
+            var student = _context.Subject.SingleOrDefault(c => c.Id == id);
+            if (student == null)
+            {
+                return RedirectToAction("All", "Seance");
+            }
+            return View(student);
+        }
+        public ActionResult salle(int id)
+        {
+            var seance = _context.Salle.SingleOrDefault(c => c.Id == id);
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Seance");
+            }
+            return View(seance);
+        }
+       
+        public ActionResult enseignant(int id)
+        {
+            var seance = _context.Enseignant.SingleOrDefault(c => c.Id == id);
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(seance);
+        }
     }
 }

@@ -40,10 +40,10 @@ namespace HighSchoolManagmentApp.Controllers
             };
             return View(ciewModel);
         }
-        public ActionResult Create(StudentViewModel student)
+        public ActionResult Create(Student student)
         {
             _context.
-                Student.Add(student.student);
+                Student.Add(student);
             _context.SaveChanges();
             return RedirectToAction("All", "Student");
         }
@@ -58,6 +58,33 @@ namespace HighSchoolManagmentApp.Controllers
                 return RedirectToAction("All", "Student");
             }
             return RedirectToAction("All", "Student");
+        }
+        public ActionResult grade(int id)
+        {
+            var student = _context.Grades.SingleOrDefault(c => c.Id == id);
+            if (student == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(student);
+        }
+        public ActionResult absence(int id)
+        {
+            var seance = _context.Absence;
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(seance);
+        }
+        public ActionResult schedule(int id)
+        {
+            var seance = _context.Seance;
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return RedirectToAction("All", "Absence");
         }
 
     }

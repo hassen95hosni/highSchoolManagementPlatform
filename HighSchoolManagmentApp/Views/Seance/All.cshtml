@@ -56,12 +56,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Subject)
+                @Html.ActionLink("subject", "subject", new { id = item.subjectId })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.salle)
+                @Html.ActionLink("salle", "salle", new { id = item.salleId })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.enseignant)
+                @Html.ActionLink("enseignant", "enseignant", new { id = item.enseignantId })
             </td>
 
             <td>

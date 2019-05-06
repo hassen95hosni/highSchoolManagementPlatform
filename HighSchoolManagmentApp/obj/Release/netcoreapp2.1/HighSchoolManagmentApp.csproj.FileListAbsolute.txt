@@ -48,3 +48,15 @@ S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentAp
 S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Salle\New.g.cshtml.cs
 S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Seance\New.g.cshtml.cs
 S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Student\New.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\absence\student.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\absence\seance.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Enseignant\emploi.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Enseignant\subject.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Grade\emploi.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Grade\subject.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Salle\materiel.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Seance\enseignant.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Seance\salle.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Seance\subject.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Student\absence.g.cshtml.cs
+S:\asp\HisghSchoolManagment\High School Managment Platform\HighSchoolManagmentApp\obj\Release\netcoreapp2.1\Razor\Views\Student\grade.g.cshtml.cs

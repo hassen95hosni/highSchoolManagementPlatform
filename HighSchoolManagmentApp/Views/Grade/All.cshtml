@@ -39,10 +39,12 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Subjects)
+                   
+                    @Html.ActionLink("subject", "subject", new { id = item.Id })
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.schedule)
+                    
+                    @Html.ActionLink("emploi", "emploi", new { id = item.Id })
                 </td>
                 <td>
                     @Html.ActionLink("Delete", "Delete", new {id = item.Id })

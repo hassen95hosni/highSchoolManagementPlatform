@@ -1,0 +1,10 @@
+﻿@model HighSchoolManagmentApp.Models.Grade
+@{
+    ViewData["Title"] = "grade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>grade</h2>
+@Model.Name
+@Html.ActionLink("schedule", "schedule", new { id = Model.Id })
+

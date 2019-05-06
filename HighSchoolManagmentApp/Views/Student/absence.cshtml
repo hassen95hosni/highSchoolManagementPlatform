@@ -1,0 +1,63 @@
+﻿
+@model IEnumerable<HighSchoolManagmentApp.Models.Absence>
+
+@{
+    ViewData["Title"] = "All Absence";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Absence</h2>
+
+<p>
+    <a asp-action="new">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.seance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.studentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.raison)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.seanceId)
+                    @Html.ActionLink("seance", "seance", new { id = item.seanceId })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.studentId)
+                    @Html.ActionLink("student", "student", new { id = item.studentId })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.raison)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

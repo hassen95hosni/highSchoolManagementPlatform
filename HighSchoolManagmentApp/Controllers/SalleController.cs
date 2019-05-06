@@ -45,10 +45,10 @@ namespace HighSchoolManagmentApp.Controllers
             };
             return View(viewModel);
         }
-        public ActionResult Create(SalleViewModel salle)
+        public ActionResult Create(Salle salle)
         {
             _context.
-                Salle.Add(salle.salle);
+                Salle.Add(salle);
             _context.SaveChanges();
             return RedirectToAction("All", "Salle");
         }
@@ -63,6 +63,15 @@ namespace HighSchoolManagmentApp.Controllers
                 return RedirectToAction("All", "Salle");
             }
             return RedirectToAction("All", "Salle");
+        }
+        public ActionResult materiel(int id)
+        {
+            var seance = _context.Materiels;
+            if (seance == null)
+            {
+                return RedirectToAction("All", "Absence");
+            }
+            return View(seance);
         }
 
     }
